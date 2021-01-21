@@ -52,8 +52,6 @@ def is_validated_english_sentence(user_input):
     
     
 
-is_validated_english_sentence('ASD ADS')
-
 
 
 
@@ -98,7 +96,7 @@ def decoding_sentence(morse_sentence):
             result = result + decoding_character(code)
             
     return result.strip()
-decoding_sentence("-.-- --- ..-  .- .-. .  ..-.      ")
+
 
 
 
@@ -112,7 +110,6 @@ def encoding_sentence(english_sentence):
         result = result + encoding_character(a) + ' '
         
     return result
-encoding_sentence("HI! Fine, Thank you.")
 
 
 
