@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[141]:
+
 
 
 # -*- coding: utf8 -*-
@@ -17,7 +17,6 @@ def get_morse_code_dict():
     return morse_code
 
 
-# In[4]:
 
 
 # Help Function - 수정하지 말 것
@@ -35,15 +34,12 @@ def get_help_message():
     return message
 
 
-# In[147]:
 
 
 def is_help_command(user_input):
     tmp = user_input.lower()
     return True if tmp == "h" or tmp == "help" else False
 
-
-# In[266]:
 
 
 import re
@@ -59,7 +55,6 @@ def is_validated_english_sentence(user_input):
 is_validated_english_sentence('ASD ADS')
 
 
-# In[282]:
 
 
 def is_validated_morse_code(user_input):
@@ -71,14 +66,12 @@ def is_validated_morse_code(user_input):
             return False
 
 
-# In[157]:
 
 
 def get_cleaned_english_sentence(raw_english_sentence):
     return re.sub('[.,!?]','',raw_english_sentence)
 
 
-# In[80]:
 
 
 def decoding_character(morse_character):
@@ -87,15 +80,12 @@ def decoding_character(morse_character):
     return tmp[morse_character]
 
 
-# In[126]:
-
 
 def encoding_character(english_character):
     morse_code_dict = get_morse_code_dict()
     return morse_code_dict[english_character.upper()]
 
 
-# In[140]:
 
 
 def decoding_sentence(morse_sentence):
@@ -111,8 +101,6 @@ def decoding_sentence(morse_sentence):
 decoding_sentence("-.-- --- ..-  .- .-. .  ..-.      ")
 
 
-# In[287]:
-
 
 def encoding_sentence(english_sentence):
     tmp = ' '.join(get_cleaned_english_sentence(english_sentence.strip()).split())
@@ -126,8 +114,6 @@ def encoding_sentence(english_sentence):
     return result
 encoding_sentence("HI! Fine, Thank you.")
 
-
-# In[288]:
 
 
 def main():
